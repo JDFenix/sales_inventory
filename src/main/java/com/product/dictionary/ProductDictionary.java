@@ -1,5 +1,7 @@
 package main.java.com.product.dictionary;
 
+import java.util.Random;
+
 public class ProductDictionary {
 
     public static final String[] namesBoardGames = {
@@ -161,7 +163,18 @@ public class ProductDictionary {
             "Barbie Dreamtopia Accessories", "Barbie Dreamtopia Playsets"
     };
 
-    public static final String[] categories = {"boardGames", "girlsToys" , "boysToys"};
+    public static final String[] categories = {"boardGames", "girlsToys", "boysToys"};
 
-    public static final int[] prices = {};
+
+    public static float prices() {
+        Random random = new Random();
+        double randomPrice = random.nextDouble(250.00);
+        return (float) (Math.round(randomPrice * 100.0) / 100.0);
+    }
+
+
+    public static int quantityStock() {
+        Random random = new Random();
+        return random.nextInt(500);
+    }
 }

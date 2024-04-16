@@ -1,37 +1,37 @@
 package main.java.com.product.service;
 
-import main.java.com.product.Statement.ProductStatement;
+import main.java.com.product.Factory.ProductFactory;
 import main.java.com.product.dto.ProductDTO;
 
 public class ProductService {
 
-    private final ProductStatement productStatement;
+    private final ProductFactory productFactory;
 
-    public ProductService(ProductStatement productStatement) {
+    public ProductService(ProductFactory productFactory) {
 
-        this.productStatement = productStatement;
+        this.productFactory = productFactory;
     }
 
 
     public void createProduct(ProductDTO productDTO) {
 
-        productStatement.createProduct(productDTO);
+        productFactory.createProduct(productDTO);
     }
 
     public void updateProduct(int id) {
-        productStatement.updateProduct(id);
+        productFactory.updateProduct(id);
     }
 
     public void deleteProduct(int id) {
-        productStatement.deleteProduct(id);
+        productFactory.deleteProduct(id);
     }
 
     public void deleteAllProducts() {
-        productStatement.deleteAllProducts();
+        productFactory.deleteAllProducts();
     }
 
     public int getRandomProductId() {
-      return productStatement.getRandomProductId();
+      return productFactory.getRandomProductId();
     }
 
 }

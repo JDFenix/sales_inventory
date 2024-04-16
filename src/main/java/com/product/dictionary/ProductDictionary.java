@@ -175,6 +175,6 @@ public class ProductDictionary {
 
     public static int quantityStock() {
         Random random = new Random();
-        return random.nextInt(500);
+        return random.nextInt(50);
     }
 }
